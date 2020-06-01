@@ -50,6 +50,7 @@ for counter, symbol in enumerate(pivoted.columns.tolist()):
     data[symbol+' weight'] = [w[counter] for w in p_weights]
 
 portfolios  = pd.DataFrame(data)
+portfolios.head()
 
 portfolios.plot.scatter(x='Volatility', y='Returns', grid=True)
 
